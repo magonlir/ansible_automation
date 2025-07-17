@@ -1,0 +1,13 @@
+all:
+  children:
+    routers:
+      hosts: 
+        c8kv-internet:
+          ansible_host: 172.16.10.61
+          ansible_network_os: ios
+          # ansible_ssh_common_args: '-o KexAlgorithms=+diffie-hellman-group14-sha256'
+    switches:
+      hosts:
+        n9kv-sw1:
+          ansible_host: 172.16.10.62
+          ansible_network_os: nxos
